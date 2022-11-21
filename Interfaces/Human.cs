@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    internal class Human : IHuman
+    internal class Human : IHuman, IKati
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Mobile { get; set; }
+        public int MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Human()
         {

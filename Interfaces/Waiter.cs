@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    internal class Waiter : Human, IWaiter
+    internal class Waiter : Human, IWaiter, IKati
     {
         public decimal Salary { get; set; }
         public Waiter() //: base() 

@@ -44,9 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Athlete.cs" />
+    <Compile Include="Bouzouki.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="IAthlete.cs" />
     <Compile Include="IHuman.cs" />
+    <Compile Include="IKati.cs" />
     <Compile Include="IWaiter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

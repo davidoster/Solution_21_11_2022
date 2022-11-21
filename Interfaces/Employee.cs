@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    internal class Athlete : IAthlete, IHuman, IKati
+    internal class Employee : IHuman, IKati
     {
         public int MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public void RunForestGump()
-        {
-            throw new NotImplementedException();
-        }
 
         public int Walk(int steps)
         {
