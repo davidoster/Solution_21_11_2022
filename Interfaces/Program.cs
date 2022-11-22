@@ -10,6 +10,13 @@ namespace Interfaces
     {
         static void Main(string[] args)
         {
+            //Coach coach = new Coach();
+            //Console.WriteLine(TrainingProfession.RUNNING);
+            //if (true) //(coach.Profession == TrainingProfession.RUNNING)
+            //{
+            //    Console.WriteLine("sdfsdf");
+            //}
+
             //Console.WriteLine(new Athlete());
 
             //List<Human> listOfHumans = new List<Human>();
@@ -37,13 +44,29 @@ namespace Interfaces
                 new Athlete(),
                 new Athlete(),
             };
-            listOfAthletes.ForEach(a => Console.WriteLine(a)); // (Console.WriteLine)
+            //listOfAthletes.ForEach(a => Console.WriteLine(a)); // (Console.WriteLine)
 
             // Exercise 2. Create an appropriate list that can hold athletes
             // and coaches (you need to make the class)
+            List<IHuman> listOfCoachesAndAthletes = new List<IHuman>()
+            {
+                new Coach(), new Coach(), new Coach()
+            };
+            listOfCoachesAndAthletes.AddRange(listOfAthletes);
+            listOfCoachesAndAthletes.ForEach(Console.WriteLine);
 
             // Exercise 3. Create an instance of a list that holds athletes and their scores
             // class Score (int Id, decimal Perfomance, DateTime DateOfPerformance, int AthletesId)
+            Athlete athleteJohn = new Athlete();
+            Score scoreJohn = new Score(10.22m, DateTime.Now, athleteJohn.Id);
+            // create a list that holds athleteJohn and scoreJohn
+            // 1st WAY
+            List<AthleteScores> listOfAthletesAndTheirScores = new List<AthleteScores>();
+            // FILL THE list with data and PRINT THEM
+            AthleteScores athleteScores = new AthleteScores(new Athlete());
+            Console.WriteLine(athleteScores.SomeInt);
+
+            // 2nd WAY
 
             // Exercise 4. Create a series methods to a new class (decide the name of the class...)
             // where you need to:
