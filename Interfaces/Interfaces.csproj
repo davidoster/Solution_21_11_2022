@@ -54,12 +54,14 @@
   <ItemGroup>
     <Compile Include="Athlete2.cs" />
     <Compile Include="AthleteScores.cs" />
+    <Compile Include="AthleteUtilities.cs" />
     <Compile Include="Coach.cs" />
     <Compile Include="Athlete.cs" />
     <Compile Include="Bouzouki.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="IAthlete.cs" />
+    <Compile Include="IAthleteUtilities.cs" />
     <Compile Include="ICoach.cs" />
     <Compile Include="IHuman.cs" />
     <Compile Include="IKati.cs" />

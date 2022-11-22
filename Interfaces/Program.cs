@@ -69,6 +69,9 @@ namespace Interfaces
             // 2nd WAY --- THE MOST FREQUENT WAY
             List<Athlete2> listAthletes = new List<Athlete2>();
 
+            Athlete2 athlete2 = new Athlete2();
+            
+
             // Exercise 4. Create a series methods to a new class (decide the name of the class...)
             // where you need to:
             // A. Find the best athlete's Performance
