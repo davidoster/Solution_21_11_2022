@@ -1,4 +1,7 @@
-﻿using System;
+﻿using RandomDataGenerator.FieldOptions;
+using RandomDataGenerator.Randomizers;
+using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +11,18 @@ namespace Interfaces
 {
     internal class Athlete : IAthlete, IHuman, IKati
     {
-        public int MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Mobile { get; set; }
+        public int MyProperty { get; set; }
+        public Athlete()
+        {
+            Id = (int)RandomizerFactory.GetRandomizer(new FieldOptionsInteger()).Generate();
+            Name = RandomizerFactory.GetRandomizer(new FieldOptionsFullName()).Generate();
+            Email = RandomizerFactory.GetRandomizer(new FieldOptionsEmailAddress()).Generate();
+            Mobile = RandomizerFactory.GetRandomizer(new FieldOptionsText()).Generate();
+        }
 
         public void RunForestGump()
         {
@@ -28,6 +42,11 @@ namespace Interfaces
         public DateTimeOffset Walk(DateTimeOffset time)
         {
             throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return $"{Id}\t{Name}\t{Email}\t{Mobile}";
         }
     }
 }

@@ -10,24 +10,34 @@ namespace Interfaces
     {
         static void Main(string[] args)
         {
-            List<Human> listOfHumans = new List<Human>();
-            listOfHumans.Add(new Human());
-            listOfHumans.Add(new Waiter()); /// because of inheritance this is allowed
-            //listOfHumans.Add(new Athlete()); // this cannot be done due to incompatible types
+            //Console.WriteLine(new Athlete());
 
-            List<IKati> listOfEverybody = new List<IKati>();
-            listOfEverybody.Add(new Human());
-            listOfEverybody.Add(new Waiter()); 
-            listOfEverybody.Add(new Athlete());
-            listOfEverybody.Add(new Employee());
+            //List<Human> listOfHumans = new List<Human>();
+            //listOfHumans.Add(new Human());
+            //listOfHumans.Add(new Waiter()); /// because of inheritance this is allowed
+            ////listOfHumans.Add(new Athlete()); // this cannot be done due to incompatible types
 
-            IHuman employee22 = new Employee(); // polymorphism
+            //List<IKati> listOfEverybody = new List<IKati>();
+            //listOfEverybody.Add(new Human());
+            //listOfEverybody.Add(new Waiter()); 
+            //listOfEverybody.Add(new Athlete());
+            //listOfEverybody.Add(new Employee());
 
-            Bouzouki bouzouki = new Bouzouki();
-            listOfEverybody.Add(bouzouki);     
+            //IHuman employee22 = new Employee(); // polymorphism
+
+            //Bouzouki bouzouki = new Bouzouki();
+            //listOfEverybody.Add(bouzouki);
 
             // Exercise 1. Create a series of athletes with random data
             // Store these athletes to a List<Athlete>
+            List<Athlete> listOfAthletes = new List<Athlete>()
+            {
+                new Athlete(),
+                new Athlete(), 
+                new Athlete(),
+                new Athlete(),
+            };
+            listOfAthletes.ForEach(a => Console.WriteLine(a)); // (Console.WriteLine)
 
             // Exercise 2. Create an appropriate list that can hold athletes
             // and coaches (you need to make the class)

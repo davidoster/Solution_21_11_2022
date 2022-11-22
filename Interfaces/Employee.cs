@@ -8,7 +8,11 @@ namespace Interfaces
 {
     internal class Employee : IHuman, IKati
     {
-        public int MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int MyProperty { get; set;}
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Mobile { get; set; }
 
         public int Walk(int steps)
         {
