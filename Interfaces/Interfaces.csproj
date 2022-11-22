@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Athlete2.cs" />
     <Compile Include="AthleteScores.cs" />
     <Compile Include="Coach.cs" />
     <Compile Include="Athlete.cs" />
