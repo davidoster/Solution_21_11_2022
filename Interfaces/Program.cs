@@ -80,13 +80,13 @@ namespace Interfaces
             // Exercise 4. Create a series methods to a new class (decide the name of the class...)
             // where you need to:
             // A. Find the best athlete's Performance
-            List<Score> scores = new List<Score>();
-            scores.Add(new Score());
-            scores.Add(new Score());
-            scores.Add(new Score());
-            scores.Add(new Score());
-            scores.Add(new Score());
-            scores.Add(new Score());
+            //List<Score> scores = new List<Score>();
+            //scores.Add(new Score());
+            //scores.Add(new Score());
+            //scores.Add(new Score());
+            //scores.Add(new Score());
+            //scores.Add(new Score());
+            //scores.Add(new Score());
             //scores.ForEach(Console.WriteLine); // print all the scores
             AthleteUtilities athleteUtilities = new AthleteUtilities();
             //Console.WriteLine($"Best Performance: {athleteUtilities.FindBestPerformance(scores)}"); // test with scores
@@ -95,13 +95,15 @@ namespace Interfaces
             List<Athlete2> athletes = new List<Athlete2>();
             athletes.Add(new Athlete2());
             athletes.Add(new Athlete2());
-            athletes.Add(new Athlete2());
-            athletes.Add(new Athlete2());
-            athletes.Add(new Athlete2());
+            //athletes.Add(new Athlete2());
+            //athletes.Add(new Athlete2());
+            //athletes.Add(new Athlete2());
+            //athletes.ForEach(Console.WriteLine); // prints all athletes
             athleteUtilities.SortScoresPerDateOfPerformance(athletes, SortType.ASCENDING);
+            Console.WriteLine("\nDESCENDING");
+            athleteUtilities.SortScoresPerDateOfPerformance(athletes, SortType.DESCENDING);
             // C. Find the biggest / largest Athlete's Id
-            athletes.ForEach(Console.WriteLine); // prints all athletes
-            Console.WriteLine(athleteUtilities.FindHighestId(athletes));
+            //Console.WriteLine(athleteUtilities.FindHighestId(athletes));
             // Exercise 5. Put all the above to a small menu
 
 

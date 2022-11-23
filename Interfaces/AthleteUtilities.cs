@@ -62,9 +62,43 @@ namespace Interfaces
                     sortedScores.Add(athletes[i].Scores[j]);
                 }
             }
+            Console.WriteLine("Original Scores");
+            sortedScores.ForEach(Console.WriteLine);
 
             // Step 3. sort the sortedScores based on sortType
-            sortedScores.Sort();
+            if (sortType == SortType.ASCENDING)
+            {
+                for (int j = 0; j <= sortedScores.Count - 2; j++)
+                {
+                    for (int i = 0; i <= sortedScores.Count - 2; i++)
+                    {
+                        if (sortedScores[i].DateOfPerformance > sortedScores[i + 1].DateOfPerformance)
+                        {
+                            var temp = sortedScores[i + 1];
+                            sortedScores[i + 1] = sortedScores[i];
+                            sortedScores[i] = temp;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int j = 0; j <= sortedScores.Count - 2; j++)
+                {
+                    for (int i = 0; i <= sortedScores.Count - 2; i++)
+                    {
+                        if (sortedScores[i].DateOfPerformance < sortedScores[i + 1].DateOfPerformance)
+                        {
+                            var temp = sortedScores[i + 1];
+                            sortedScores[i + 1] = sortedScores[i];
+                            sortedScores[i] = temp;
+                        }
+                    }
+                }
+                //sortedScores.Reverse();
+            }
+            Console.WriteLine("\nSorted Scores");
+            sortedScores.ForEach(Console.WriteLine);
         }
     }
 }

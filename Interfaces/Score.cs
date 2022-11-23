@@ -33,7 +33,7 @@ namespace Interfaces
             //    result = (decimal)f / Id;
             //}
             Performance = result;
-            DateTime dateTime = new DateTime(_random.Next());
+            DateTime dateTime = (DateTime)RandomizerFactory.GetRandomizer(new FieldOptionsDateTime()).Generate(); //new DateTime(_random.Next());
             DateOfPerformance = dateTime;
         }
 

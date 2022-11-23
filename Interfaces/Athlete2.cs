@@ -24,6 +24,7 @@ namespace Interfaces
             Name = RandomizerFactory.GetRandomizer(new FieldOptionsFullName()).Generate();
             Email = RandomizerFactory.GetRandomizer(new FieldOptionsEmailAddress()).Generate();
             Mobile = RandomizerFactory.GetRandomizer(new FieldOptionsText()).Generate();
+            Scores = new List<Score>();
             Scores.Add(new Score());
             Scores.Add(new Score());
             Scores.Add(new Score());
