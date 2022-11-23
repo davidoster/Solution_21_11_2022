@@ -14,10 +14,27 @@ namespace Interfaces
         public decimal Performance { get; set; }
         public DateTime DateOfPerformance { get; set; }
         public int AthletesId { get; set; } // DON'T USE for 2nd way of Exercise 3
+        private Random _random= new Random();
 
         public Score()
         {
             Id = (int)RandomizerFactory.GetRandomizer(new FieldOptionsInteger()).Generate();
+            decimal result = (decimal)_random.NextDouble() * Id;
+            //if (f > (float)decimal.MaxValue)
+            //{
+            //    result = decimal.MaxValue;
+            //}
+            //if(f < (float)decimal.MinValue) 
+            //{ 
+            //    result = decimal.MinValue;
+            //}
+            //if (f < (float)decimal.MaxValue && f > (float)decimal.MinValue)
+            //{
+            //    result = (decimal)f / Id;
+            //}
+            Performance = result;
+            DateTime dateTime = new DateTime(_random.Next());
+            DateOfPerformance = dateTime;
         }
 
         public Score(decimal performance, DateTime dateOfPerformance, int athletesId)

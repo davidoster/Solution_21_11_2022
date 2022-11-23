@@ -3,6 +3,7 @@ using RandomDataGenerator.Randomizers;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,9 @@ namespace Interfaces
             Name = RandomizerFactory.GetRandomizer(new FieldOptionsFullName()).Generate();
             Email = RandomizerFactory.GetRandomizer(new FieldOptionsEmailAddress()).Generate();
             Mobile = RandomizerFactory.GetRandomizer(new FieldOptionsText()).Generate();
+            Scores.Add(new Score());
+            Scores.Add(new Score());
+            Scores.Add(new Score());
         }
 
         public void RunForestGump()
@@ -47,7 +51,13 @@ namespace Interfaces
 
         public override string ToString()
         {
-            return $"{Id}\t{Name}\t{Email}\t{Mobile}";
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{Id}\t{Name}\t{Email}\t{Mobile}");
+            foreach(var score in Scores)
+            {
+                sb.AppendLine(score.ToString());
+            }
+            return sb.ToString();
         }
     }
 }
